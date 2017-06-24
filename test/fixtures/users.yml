@@ -3,3 +3,26 @@ dandan:
   name: dandan
   email: dandan@dandan.com
   password_digest: <%= User.digest('password') %>
+  admin: true
+
+mangmang:
+  name: mangmang
+  email: mangmang@mangmang.com
+  password_digest: <%= User.digest('password') %>
+
+chaichai:
+  name: chaichai
+  email: chaichai@chaichai.com
+  password_digest: <%= User.digest('password') %>
+
+guangguang:
+  name: guangguang
+  email: guangguang@guangguang.com
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
