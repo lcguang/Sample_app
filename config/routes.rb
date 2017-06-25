@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :password_resets,     only: [:new, :create, :edit, :update]
+  get 'password_resets/new'
+  get 'password_resets/edit'
+
   resources :account_activations, only: [:edit]
   get 'sessions/new'
 
